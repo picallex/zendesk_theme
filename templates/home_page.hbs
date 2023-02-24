@@ -1,5 +1,6 @@
 <section class="section hero">
   <div class="hero-inner">
+    <h1 style="color: white;"><b>En que podemos ayudarte?</b></h1>
     {{search submit=false instant=settings.instant_search class='search search-full'}}
   </div>
 </section>
@@ -12,7 +13,25 @@
           {{#if ../has_multiple_categories}}
             <li class="blocks-item">
               <a href='{{url}}' class="blocks-item-link">
-                <h4 class="blocks-item-title">{{name}}</h4>
+                {{#is name 'Guia de inicio'}}
+                  <img class="section-image" src="{{asset 'guia_inicio.png'}}"/>
+                {{/is}}
+                {{#is name 'Preguntas frecuentes'}}
+                  <img class="section-image" src="{{asset 'preg_frecuentes.png'}}"/>
+                {{/is}}
+                {{#is name 'Articulos de interes'}}
+                  <img class="section-image" src="{{asset 'art_interes.png'}}"/>
+                {{/is}}
+                {{#is name 'Problemas y resolucion'}}
+                  <img class="section-image" src="{{asset 'problemas_resolucion.png'}}"/>
+                {{/is}}
+                {{#is name 'Telefonia'}}
+                  <img class="section-image" src="{{asset 'telefonia.png'}}"/>
+                {{/is}}
+                {{#is name 'Drivers'}}
+                  <img class="section-image" src="{{asset 'drivers.png'}}"/>
+                {{/is}}
+                <h2 class="blocks-item-title">{{name}}</h2>
                 <p class="blocks-item-description">{{excerpt description}}</p>
               </a>
             </li>
@@ -20,9 +39,7 @@
             {{#each sections}}
               <li class="blocks-item">
                 <a href='{{url}}' class="blocks-item-link">
-                  <h4 class="blocks-item-title">
-                    {{name}}
-                  </h4>
+                  <h4 class="blocks-item-title"><b>{{name}}</b></h4>
                   <p class="blocks-item-description">{{excerpt description}}</p>
                 </a>
               </li>

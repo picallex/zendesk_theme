@@ -1,1 +1,1 @@
-# zendesk_theme
+# picallex-zendesk-theme
